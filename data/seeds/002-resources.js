@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('resources').insert([
-        {resource_name: 'Google', resource_description: 'A massive internet database'}, //1
-        {resource_name: 'Lambda Training Kit', resource_description: 'Curriculum specific information'}, //2
-        {resource_name: 'Setup cheet sheet', resource_description: 'Quick directions on how to set up files for sql projects'} //3
+        {name: 'Google', description: 'A massive internet database'}, //1
+        {name: 'Lambda Training Kit', description: 'Curriculum specific information'}, //2
+        {name: 'Setup cheet sheet', description: 'Quick directions on how to set up files for sql projects'} //3
       ]);
     });
 };

@@ -15,6 +15,6 @@ function insert(resources) {
       .insert(resources)
       .then(ids => {
         return db('resources')
-        .where({ resource_id: ids[0] });
+        .where({ id: ids[0] });
       });
   }

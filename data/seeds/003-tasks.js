@@ -5,8 +5,8 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('tasks').insert([
-        {task_description: 'Set up projects files', task_notes: 'Use your set up cheat sheet', project_id: 1 }, 
-        {task_description: 'Plan out front end of app', task_notes: 'Work with your team to decide design aspects', project_id: 2 }
+        {description: 'Set up projects files', notes: 'Use your set up cheat sheet', project_id: 1 }, 
+        {description: 'Plan out front end of app', notes: 'Work with your team to decide design aspects', project_id: 2 }
       ]);
     });
 };

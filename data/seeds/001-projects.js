@@ -5,8 +5,8 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('projects').insert([
-        {project_name: 'Sprint Challenge', project_description: 'A challenging task', completed: false }, //1
-        {project_name: 'Side Project', project_description: 'An App that helps us reconnect with friends', completed: false } //2
+        {name: 'Sprint Challenge', description: 'A challenging task', completed: false }, //1
+        {name: 'Side Project', description: 'An App that helps us reconnect with friends', completed: false } //2
       ]);
     });
 };
