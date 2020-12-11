@@ -74,11 +74,11 @@ Your finished project must include all of the following requirements:
   - [ ] when adding a `task` the client must provide a `project_id` that points to the `id` of an existing project.
   - [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 - [ ] Build an API inside the `api` folder with endpoints for:
-  1. adding a new resource - `[POST] /api/resources`
-  2. retrieving all resources - `[GET] /api/resources`
-  3. adding a new project - `[POST] /api/projects`
-  4. retrieving all projects - `[GET] /api/projects`
-  5. adding a new task - `[POST] /api/tasks`
+  *1. adding a new resource - `[POST] /api/resources`
+  *2. retrieving all resources - `[GET] /api/resources`
+  *3. adding a new project - `[POST] /api/projects`
+  *4. retrieving all projects - `[GET] /api/projects`
+  *5. adding a new task - `[POST] /api/tasks`
   6. retrieving all tasks - `[GET] /api/tasks` **Each task must include `project_name` and `project description` so you will need to join tables**
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.

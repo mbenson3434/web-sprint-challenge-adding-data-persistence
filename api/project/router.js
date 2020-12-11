@@ -18,4 +18,18 @@ router.get('/', (req, res) => {
         })
 });
 
+router.post('/', (req, res) => {
+    const newProject = req.body
+    db.insert(newProject)
+      .then(data => {
+        res.status(201).json(data)
+      })
+      .catch(error => {
+        console.log(error)
+        res.status(500).json({
+          message: "There was an error while saving the user to the database"
+        })
+      })
+  });
+
 module.exports = router;

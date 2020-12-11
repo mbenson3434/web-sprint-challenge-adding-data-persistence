@@ -3,12 +3,18 @@ const db = require('../../data/dbConfig');
 
 module.exports = {
     get,
-    //getById,
-    //insert,
-    //update,
-    //remove,
+    insert
 };
 
 function get() {
     return db('resources');
 }
+
+function insert(resources) {
+    return db('resources')
+      .insert(resources)
+      .then(ids => {
+        return db('resources')
+        .where({ resource_id: ids[0] });
+      });
+  }
