@@ -7,9 +7,16 @@ const router = express.Router();
 
 router.get('/', (req, res) => {
     db.get(req.query)
-        .then(data => {
-            res.status(200).json(data)
-        })
+    .then(data => {
+      for (let i in data) {
+        if (data[i].completed === 0) {
+          data[i].completed = false
+        } else {
+          data[i].completed = true;
+        }
+      }
+      res.status(200).json(data);
+    })
         .catch(error => {
             console.log(error)
             res.status(500).json({
