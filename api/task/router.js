@@ -28,9 +28,14 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     const newTask = req.body
     db.insert(newTask)
-      .then(data => {
-        res.status(201).json(data)
-      })
+    .then(task => {
+      if (task[0].completed === 0) {
+        task[0].completed = false
+      } else {
+        task[0].completed = true;
+      }
+      res.status(201).json(task[0]);
+    })
       .catch(error => {
         console.log(error)
         res.status(500).json({
